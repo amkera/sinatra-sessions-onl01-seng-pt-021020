@@ -5,6 +5,7 @@ class App < Sinatra::Base
     enable :sessions unless test?
     set :session_secret, "secret"
   end
+  #These lines are enabling our application to use the sessions keyword to access the session hash. We are also setting a session secret. Don't worry too much about the session secret for now, just know that it keeps our session data safe from outsiders.
 
   before do
     content_type :txt
